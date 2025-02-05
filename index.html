@@ -12,6 +12,21 @@
         window.location.href = redirect;
       }
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const redirectBtn = document.getElementById('redirect-btn');
+        const params = new URLSearchParams(window.location.href);
+
+        if (params.has('d')) {
+          const redirectUrl = decodeURIComponent(params.get('d'));
+          redirectBtn.href = redirectUrl;
+        }
+      });
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Redirecting...</h1>
+    <p>You can also click the link below if the redirect is not working:</p>
+    <a id="redirect-btn">Click here to redirect</a>
+  </body>
 </html>
