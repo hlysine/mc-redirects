@@ -11,7 +11,7 @@
 
         if (params.has('d')) {
           const redirectUrl = decodeURIComponent(params.get('d'));
-          window.location.href = redirect;
+          window.location.href = redirectUrl;
           redirectBtn.href = redirectUrl;
         }
       });
