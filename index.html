@@ -7,7 +7,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const redirectBtn = document.getElementById('redirect-btn');
-        const params = new URLSearchParams(window.location.href);
+        const params = new URLSearchParams(window.location.search);
 
         if (params.has('d')) {
           const redirectUrl = decodeURIComponent(params.get('d'));
