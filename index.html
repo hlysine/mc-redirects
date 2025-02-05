@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      const params = new URLSearchParams(window.location.href);
-
-      if (params.has('d')) {
-        const redirectUrl = decodeURIComponent(params.get('d'));
-        window.location.href = redirect;
-      }
-    </script>
-    <script>
       document.addEventListener('DOMContentLoaded', () => {
         const redirectBtn = document.getElementById('redirect-btn');
         const params = new URLSearchParams(window.location.href);
 
         if (params.has('d')) {
           const redirectUrl = decodeURIComponent(params.get('d'));
+          window.location.href = redirect;
           redirectBtn.href = redirectUrl;
         }
       });
